@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pitzi</title>
-</head>
-<body>
-  <ul id="messages-list"></ul>
-  <form onsubmit="handleSubmit()">
-    <h2>Seus dados</h2>
-    <label for="name">Nome</label><br>
-    <input type="text" id="name" name="name"><br>
-    <label for="email">Email</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label for="cpf">CPF</label><br>
-    <input type="number" id="cpf" name="cpf">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Pitzi</title>
+  </head>
 
-    <h2>Dados do aparelho</h2>
-    <label for="device">Modelo do aparelho</label><br>
-    <input type="text" id="device" name="device"><br>
-    <label for="imei">IMEI</label><br>
-    <input type="text" id="imei" name="imei"><br>
+  <body>
+    <div class="container">
+      <ul id="messages-list"></ul>
+      <form onsubmit="handleSubmit()">
+        <h2>Seus dados</h2>
+        <div class="form-group">
+          <label for="name">Nome</label><br />
+          <input type="text" id="name" name="name" class="form-control" /><br />
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" class="form-control" /><br />
+          <label for="cpf">CPF</label><br />
+          <input type="number" id="cpf" name="cpf" class="form-control" />
+        </div>
 
-    <h2>Subscrição</h2>
-    <label for="price">Preço anual</label>
-    <select name="price" id="price">
-      <option value="10">R$200,00</option>
-      <option value="20">R$400,00</option>
-      <option value="30">R$600,00</option>
-      <option value="40">R$800,00</option>
-      <option value="50">R$1000,00</option>
-    </select><br>
+        <h2>Dados do aparelho</h2>
+        <div class="form-group">
+          <label for="device">Modelo do aparelho</label><br />
+          <input type="text" id="device" name="device" class="form-control" /><br />
+          <label for="imei">IMEI</label><br />
+          <input type="text" id="imei" name="imei" class="form-control" /><br />
+        </div>
 
-    <label for="installment">Número de parcelas</label>
-    <select name="installment" id="installment">
-      <option value="10">1x</option>
-      <option value="20">2x</option>
-      <option value="30">3x</option>
-      <option value="40">4x</option>
-      <option value="50">5x</option>
-    </select><br>
+        <h2>Subscrição</h2>
+        <div class="form-group">
+          <label for="price">Preço anual</label>
+          <select name="price" id="price" class="form-control">
+            <option value="10">R$200,00</option>
+            <option value="20">R$400,00</option>
+            <option value="30">R$600,00</option>
+            <option value="40">R$800,00</option>
+            <option value="50">R$1000,00</option> </select
+          ><br />
 
-    <button type="submit">Enviar</button>
-  </form>
-</body>
+          <label for="installment">Número de parcelas</label>
+          <select name="installment" id="installment">
+            <option value="10">1x</option>
+            <option value="20">2x</option>
+            <option value="30">3x</option>
+            <option value="40">4x</option>
+            <option value="50">5x</option> </select
+          ><br />
 
-<!-- <script src="./node_modules/axios/dist/axios.min.js"></script> -->
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="script.js"></script>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+      </form>
+    </div>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
 </html>
