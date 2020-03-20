@@ -34,9 +34,9 @@ const handleSubmit = () => {
   .then(response => {
     const message = response.data.message;
     const ul = document.querySelector("#messages-list");
-    ul.innerHTML = ''
-
     const li = document.createElement("li");
+    ul.innerHTML = ''
+    ul.className = "alert alert-success";
     li.appendChild(document.createTextNode(message));
     ul.appendChild(li);
   })
@@ -44,6 +44,7 @@ const handleSubmit = () => {
     const errorMessages = error.response.data.error;
     const ul = document.querySelector("#messages-list");
     ul.innerHTML = ''
+    ul.className = "alert alert-danger";
 
     errorMessages.forEach(error => {
       const li = document.createElement("li");
